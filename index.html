@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Trace Graph</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="radial.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="inputs">
+                <h3>General</h3>
+                <div class="general-inputs">
+
+                    <div> 
+                        <input id="issueCheck" checked="true" type="checkbox">
+                        <label id="issueCheckLabel" for="issueCheck">Issue</label>
+                    </div>
+					<!-- <div> 
+                        <input id="desDefCheck" checked="true" type="checkbox">
+                        <label id="desDefCCheckLabel" for="desDefCCheck">  Design Definitions</label>
+                    </div>
+					<div> 
+                        <input id="featCheck" checked="true" type="checkbox">
+                        <label id="featCheckLabel" for="featCheck">  Features</label>
+                    </div>
+					<div> 
+                        <input id="ReqCheck" checked="true" type="checkbox">
+                        <label id="ReqCheckLabel" for="ReqCheck">  Requirements</label>
+                    </div>
+					<div> 
+                        <input id="subtaskCheck" checked="true" type="checkbox">
+                        <label id="subtaskCheckLabel" for="subtaskCheck">  Sub-Task</label>
+                    </div> -->
+                    <div>
+                        <input id="codeCheck" checked="true" type="checkbox">
+                        <label id="codeCheckLabel" for="codeCheck">Code</label>
+                    </div>
+               
+                    
+                    <div id="noLink">
+                        <input id="noLinkNodes" checked="true" type="checkbox">
+                        <label id="noLinkLabel" for="noLinkNodes">
+                            Show nodes that have no edges
+                        </label>
+                    </div>
+                   
+                    <div id="onlyHigh">
+                        <input id="onlyHighCheck" type="checkbox">
+                        <label id="onlyHighCheckLabel" for="onlyHighCheck">
+                            Only show highlighted nodes
+                        </label>
+                    </div>
+                    <button id="clearHighlights">Clear highlights</button>
+                </div>
+
+                <h3>Issue</h3>
+                <div class="issue-inputs">
+                    <label id="issueTypeLabel" for="issueType">Issue Type</label>
+                    <select id="issueType"></select>
+                </br>
+                    <label id="issueStatusLabel" for="issueStatus">Issue Status</label>
+                    <select id="issueStatus"></select>
+                    <div class="text-input">
+                        <input id="issueID" type="text" placeholder="Path">
+                        <button id="idButton">Filter ID</button>
+                    </div>
+                    <div class="text-input">
+                        <input id="issueSummary" type="text" placeholder="Path">
+                        <button id="summaryButton">Filter Summary</button>
+                    </div>
+                    <div class="text-input">
+                        <input id="issueDescription" type="text" placeholder="Path">
+                        <button id="descriptionButton">Filter Description</button>
+                    </div>
+                    
+                </div>
+
+                <h3>Code</h3>
+                <div class="code-inputs">
+                    <label id="codeStatusLabel" for="codeStatus">Status</label>
+                    <select id="codeStatus"></select>
+                    <div class="gereral-filter-date">
+                        <label id="startDateLabel" for="startDateMonth">Start Date</label>
+                        <select id="startDateMonth"></select>
+                        <select id="startDateYear"></select>
+
+                        <label id="endDateLabel" for="endDateMonth">End Date</label>
+                        <select id="endDateMonth"></select>
+                        <select id="endDateYear"></select>
+                        
+                        <button id="dateButton">Filter Date</button>
+                    </div>
+                    <div class="text-input">
+                        <input id="codePath" type="text" placeholder="Path">
+                        <button id="pathButton">Filter Path</button>
+                    </div>
+                    
+                </div>
+                
+     
+                
+
+                
+
+            </div>
+            <div id="radial"></div>
+            <div id="info" class="radial_info"></div>
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

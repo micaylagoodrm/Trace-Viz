@@ -1,0 +1,138 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    font-family: sans-serif;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-gap: 25px;
+    grid-template-columns: auto 300px 600px 300px auto;
+    grid-template-rows: auto 600px auto;
+    grid-template-areas:
+        ". ... ... ... ."
+        ". inp vis txt ."
+        ". ... ... ... .";
+    justify-items: center;
+    align-items: center;
+}
+
+/* controls */
+
+#inputs h3:first-of-type {
+    margin-top: 0;
+}
+
+#inputs {
+    height: 600px;
+    grid-area: inp;
+    overflow-y: auto;
+}
+
+.text-input {
+    margin-top: 5px;
+}
+
+.gereral-filter-date {
+    margin: 10px 0px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-template-areas:
+        "sdl sd1 sd2 fdb"
+        "edl ed1 ed2 fdb";
+}
+
+#startDateLabel {
+    grid-area: sdl;
+    justify-self: end;
+}
+
+#endDateLabel {
+    grid-area: edl;
+    justify-self: end;
+}
+
+#startDateMonth {
+    grid-area: sd1;
+}
+
+#startDateYear {
+    grid-area: sd2;
+    margin-right: 10px;
+}
+
+#endDateMonth {
+    grid-area: ed1
+}
+
+#endDateYear {
+    grid-area: ed2;
+    margin-right: 10px;
+}
+
+#dateButton {
+    grid-area: fdb;
+}
+
+#noLinkLabel {
+    grid-area: ucl;
+    justify-self: start;
+}
+
+#noLinkNodes {
+    justify-self: end;
+    grid-area: ucc;
+}
+
+#noLink, #onlyHigh {
+  margin-bottom: 10px;
+}
+
+
+/* Radial */
+#radial {
+    width: 600px;
+    height: 600px;
+    grid-area: vis;
+    align-self: center;
+    text-align: center;
+}
+
+.radial_node.highlight, .radial_node.frozen {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.radial_node:hover {
+    fill: yellow;
+}
+
+.radial_node.frozen.clicked {
+    r: 7px;
+    stroke-width: 4px;
+}
+
+.radial_link {
+    fill: none;
+    stroke: #999;
+    stroke-width: 1px;
+    stroke-opacity: 0.5;
+}
+
+.radial_link.highlight, .radial_link.frozen {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px; 
+    stroke-opacity: 1;
+}
+
+.radial_info {
+    grid-area: txt;
+    word-wrap: break-word;
+    height: 600px;
+    width: 325px;
+    overflow-y: auto;
+}
